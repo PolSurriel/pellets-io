@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pellet.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+    
+    
+    <style>
+        * {
+            -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+            }
+        body{
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .container > canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+       
+    </style>
+</head>
+<body oncontextmenu="return false">
+        <!-- <button id="tal">TAL</button> -->
+        
+        
+        <script type="text/javascript">
+            /*document.getElementById('tal').addEventListener("click", function() {
+                var el = document.documentElement,
+                  rfs = el.requestFullscreen
+                    || el.webkitRequestFullScreen
+                    || el.mozRequestFullScreen
+                    || el.msRequestFullscreen 
+                ;
+            
+                rfs.call(el);
+
+                this.style.display = "none";
+
+            });
+        */
+        </script> 
+        
+            
+    <div id="sources" style="display:none;">
+        
+    </div>
+
+    <div id = "container" class = "container" style="cursor:none;">
+        <canvas id = "BG" width = "1080" height = "400"></canvas>
+        <canvas id = "canvas" width = "1080" height = "400"></canvas>
+        <canvas id = "FG" width = "1080" height = "400"></canvas>
+        <canvas id = "GUI" width = "1080" height = "400"></canvas>
+    </div>
+
+    <script>
+        document.getElementById('BG').width = innerWidth;
+        document.getElementById('canvas').width = innerWidth;
+        document.getElementById('FG').width = innerWidth;
+        document.getElementById('GUI').width = innerWidth;
+        document.getElementById('BG').height = innerHeight;
+        document.getElementById('canvas').height = innerHeight;
+        document.getElementById('FG').height = innerHeight;
+        document.getElementById('GUI').height = innerHeight;
+    </script>
+    
+    <script type="module" src="./js/ts-built/match.js"></script>
+    <script src="socket.js"></script>    
+
+</body>
+</html>

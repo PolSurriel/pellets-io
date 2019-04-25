@@ -1,0 +1,47 @@
+Debajo-Derecha:
+D - R
+
+Arriba-derecha:
+R - U
+
+Arriba-Izq:
+U - L
+
+Abajo-Izq:
+L-D
+
+Der / I:
+U - D
+
+Arriba / abajo:
+R - L
+
+
+
+-----------
+
+hay punto encima mio?
+D-FL U-FR
+*de los que están a la D el más L y de los que están U el másR
+
+hay punto debajo mio?
+U-FL U-FR
+
+hay punto derecha mio?
+
+L-FU L-FD
+
+hay punto izquieda mio?
+
+R-FU R-FD
+
+
+var shadowPoints = [[this.getX(),this.getY()],[r1[0],r1[1]],[r2[0],r2[1]]];
+
+ ctx.save(); 
+        ctx.translate(UMI.getPX(x-this.width/2), UMI.getPX(y)); 
+        ctx.rotate(a); 
+
+        ctx.drawImage(this.img, 0, 0, UMI.getPX(this.width), UMI.getPX(this.point)); 
+
+        ctx.restore();

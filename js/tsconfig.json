@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+
+        "outDir": "ts-built",
+        "module": "es6",
+        "target": "es5",
+        "removeComments": true
+    }
+}

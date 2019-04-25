@@ -1,0 +1,15 @@
+<button id="tal">TAL</button>
+
+<script type="text/javascript">
+    document.getElementById('tal').addEventListener("click", function() {
+        var el = document.documentElement,
+          rfs = el.requestFullscreen
+            || el.webkitRequestFullScreen
+            || el.mozRequestFullScreen
+            || el.msRequestFullscreen 
+        ;
+    
+        rfs.call(el);
+    });
+
+</script> 
